@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Cs_SwitchApp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Cs_SwitchApp_jar</output-path>
+    <root id="archive" name="Cs_SwitchApp.jar">
+      <element id="module-output" name="Cs_SwitchApp" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../Abhishek/Rar/javax.servlet.jar/javax.servlet.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../ini4j-0.5.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
