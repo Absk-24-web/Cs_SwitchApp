@@ -1,3 +1,5 @@
+package Main;
+
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
@@ -120,7 +122,7 @@ public class ISOMsgParser {
                 strBinary = ISOMsgParser.ConvertHexToBinary(ISOMsgParser.ConvertAsciiToHex(bBitmap));
             }
 
-//            String strMsgFields = Encoding.ASCII.GetString(GlobalMembers.bRequest, iFieldsPos, GlobalMembers.bRequest.length - iFieldsPos);
+//            String strMsgFields = Encoding.ASCII.GetString(Main.GlobalMembers.bRequest, iFieldsPos, Main.GlobalMembers.bRequest.length - iFieldsPos);
             int arrayLen = GlobalMembers.bRequest.length - iFieldsPos;
             byte [] toEncode =new byte[arrayLen];
             System.arraycopy(GlobalMembers.bRequest,iFieldsPos,toEncode,0,arrayLen);
@@ -155,7 +157,7 @@ public class ISOMsgParser {
                     }
                     else    //if it is variable length field
                     {
-//                        if (!int.TryParse(strMsgFields.Substring(0, GlobalMembers.objISO[iField + 1].iLength.ToString().Length), out iLen))
+//                        if (!int.TryParse(strMsgFields.Substring(0, Main.GlobalMembers.objISO[iField + 1].iLength.ToString().Length), out iLen))
                         int a = Integer.toString(GlobalMembers.objISO[iField + 1].iLength).length();
                         if (!isNumber(strMsgFields.substring(0,a)))
                         {
@@ -332,7 +334,7 @@ public class ISOMsgParser {
             {
                 //add ASCII bitmap in final reply
                 byResponse = Arrays.copyOf(byResponse,byResponse.length+16);
-//                System.arraycopy(ISOMsgParser.ConvertHexToAscii(ISOMsgParser.ConvertBinaryToHex(strReplyBitmap.toString())), 0, byResponse, byResponse.length - 16, 16);
+//                System.arraycopy(Main.ISOMsgParser.ConvertHexToAscii(Main.ISOMsgParser.ConvertBinaryToHex(strReplyBitmap.toString())), 0, byResponse, byResponse.length - 16, 16);
             }
 
             //add fields in final reply

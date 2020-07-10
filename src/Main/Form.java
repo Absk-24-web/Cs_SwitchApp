@@ -1,3 +1,5 @@
+package Main;
+
 import org.ini4j.Wini;
 
 import java.awt.EventQueue;
@@ -14,8 +16,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.time.LocalDateTime;
 import java.util.Arrays;
-import java.util.Date;
-import javax.servlet.http.HttpServletRequest;
 
 
 public class Form extends JFrame {
@@ -322,36 +322,4 @@ public class Form extends JFrame {
     }
 }
 
-
-//class receivedRequest implements Runnable{
-//    @Override
-//    public void run() {
-//        while (true){
-//            try {
-//
-//            if(!Form.socket.isConnected()){
-//                return;
-//            }
-//                //reading Msg
-//                 Form.in = new DataInputStream(Form.socket.getInputStream());
-//                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
-//                 byte[] buffer = new byte[202];
-//                 baos.write(buffer, 0, Form.in.read(buffer));
-////                 objLastReceivedMsgDT = LocalDateTime.now();
-//                 GlobalMembers.bRequest = Arrays.copyOf(GlobalMembers.bRequest, buffer.length);      //Array Resize
-//                 System.arraycopy(buffer, 0, GlobalMembers.bRequest, 0, buffer.length);  //Array Copy
-//
-//                 //convert into byte array
-////               byte[] result = baos.toByteArray();
-////               String res = Arrays.toString(result);
-////               System.out.println("Recieved from client : "+res);
-//                 Log.Write("Request received (" + Form.socket.getRemoteSocketAddress() + ")- ");
-//                 Log.Write(GlobalMembers.bRequest);
-//                 Form.lblStatus.setText("Status - Request received");
-//            } catch (IOException e) {
-//                 Log.Write("Exception in  reading msg:-" + e.getMessage());
-//            }
-//        }
-//    }
-//}
 
