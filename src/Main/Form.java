@@ -1,7 +1,6 @@
 package Main;
 
 import org.ini4j.Wini;
-
 import java.awt.EventQueue;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -250,7 +249,7 @@ public class Form extends JFrame {
                         Log.Write(GlobalMembers.bRequest);
                         lblStatus.setText("Status - Request received");
                     } catch (IOException e) {
-                        // TODO: 10-07-2020  
+                        // TODO: 10-07-2020  about thread
                         isStart = false;
                         Log.Write("Exception in  reading msg:-" + e.getMessage());
                     }

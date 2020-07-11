@@ -21,19 +21,6 @@ public class ISOMsgParser {
         return output;
     }
 
-    /// <summary>
-    /// It converts Hex String in its ASCII byte array
-    /// </summary>
-    /// <param name="strHex">String in Hex format</param>
-    /// <returns>ASCII byte array</returns>
-//    public static byte[] ConvertHexToAscii(String strHex)
-//    {
-//        byte[] Asc = new byte[strHex.Length / 2];
-//        for (int i = 0; i < Asc.Length; i++)
-//            Asc[i] = Convert.ToByte(strHex.substring(i * 2, 2), 16);
-//        return Asc;
-//    }
-
 
     /// <summary>
     /// Convert bytes in ASCII to its Hex Format
@@ -219,7 +206,7 @@ public class ISOMsgParser {
 
             for (int iField = 1; iField < 128; iField++)
             {
-                if (GlobalMembers.objISO[iField + 1].strValue != null && GlobalMembers.objISO[iField + 1].strValue != "")
+                if (GlobalMembers.objISO[iField + 1].strValue != null && !GlobalMembers.objISO[iField + 1].strValue.equals(""))
                 {
                     strReplyBitmap.append("1");
                     if (GlobalMembers.objISO[iField + 1].iType == 0)
@@ -261,7 +248,7 @@ public class ISOMsgParser {
             if (GlobalMembers.bAddMsgLen)
             {
 
-                int iMsgLen = ((GlobalMembers.bAddMsgLen) ? GlobalMembers.usMsgLen : 0) + ((GlobalMembers.bIsHexBitmap) ? 32 : 16) + strReplyMsg.length() + ((GlobalMembers.bAddTrailingByte) ? 1 : 0);
+                int iMsgLen = GlobalMembers.usMsgLen + (GlobalMembers.bIsHexBitmap ? 32 : 16) + strReplyMsg.length() + (GlobalMembers.bAddTrailingByte ? 1 : 0);
 
                 byte[] bMsgLen = new byte[1];
 

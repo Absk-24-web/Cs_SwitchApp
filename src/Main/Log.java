@@ -17,7 +17,6 @@ class Log
        try
        {
 //			System.out.println(LogData);
-
            DateFormat date = new SimpleDateFormat("dd-MM-yyyy");
            Date dateparse = new Date();
 
@@ -68,8 +67,6 @@ class Log
    {
        try
        {
-//			System.out.println(LogData);
-
            DateFormat date = new SimpleDateFormat("dd-MM-yyyy");
            Date dateparse = new Date();
 
@@ -123,8 +120,6 @@ class Log
    public static void Write(String LogData, String msgComm) {
        try
        {
-//			System.out.println(LogData);
-
            DateFormat date = new SimpleDateFormat("dd-MM-yyyy");
            Date dateparse = new Date();
 

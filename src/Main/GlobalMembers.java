@@ -10,15 +10,12 @@ public class GlobalMembers {
     }
 
 
-
             //Data members for ISO message composition
             class ISOFields
             {
-                //public string strDesc;
                 public int iType;
                 public int iLength;
                 public String strValue;
-                //public bool bVisible;
             }
             public static ISOFields[] objISO;
 
@@ -199,10 +196,10 @@ public class GlobalMembers {
 
                 strDefMTI = "";
 
-//                for (int i = 0; i < objISO.length; i++)
-//                {
-//                    objISO[i].strValue = "";
-//                }
+                for (int i = 0; i < 128; i++)
+                {
+                    objISO[i].strValue = "";
+                }
             }
         }
 
